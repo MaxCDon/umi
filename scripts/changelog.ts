@@ -3,7 +3,7 @@ import { getReleaseNotes } from './utils/getReleaseNotes';
 
 (async () => {
   const { releaseNotes } = await getReleaseNotes('4.0.54');
-  console.log(7777777);
+  console.log(888);
   console.log(releaseNotes);
 })().catch((e) => {
   console.error(e);
