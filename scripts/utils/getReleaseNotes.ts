@@ -1,6 +1,6 @@
 import { Octokit } from 'octokit';
 
-export async function getReleaseNotes(version: string) {
+export async function getReleaseNotes(version: string, branch: string) {
   const GITHUB_TOKEN_FILE = '.github_token';
   const OWNER = 'MaxCDon';
   const REPO = 'umi';
@@ -14,6 +14,7 @@ export async function getReleaseNotes(version: string) {
     `POST /repos/${OWNER}/${REPO}/releases/generate-notes`,
     {
       tag_name: `v${version}`,
+      target_commitish: branch,
     },
   );
   const releaseNotes = releaseNotesRes.data.body;
