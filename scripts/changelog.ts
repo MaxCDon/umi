@@ -6,7 +6,7 @@ import { getReleaseNotes } from './utils/getReleaseNotes';
     '0.0.5',
     'feature/tag_max_20230307',
   );
-  console.log(999999);
+  console.log(9999999);
   console.log(releaseNotes);
 })().catch((e) => {
   console.error(e);
